@@ -1,0 +1,609 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/assets/fonts/Poppins-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/assets/fonts/Poppins-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/assets/fonts/Poppins-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/assets/fonts/Poppins-Bold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/assets/fonts/Poppins-ExtraBold.ttf);
+    font-weight: 700;
+}
+
+
+/*------------------------ 
+ GLobal Css
+------------------------*/
+
+ :root {
+    --primary-color: #5A4FCF;
+    --secondary-color: #FDC886;
+    --black-color: #232631;
+    --gray-color: #656565;
+    --place-color: #858585;
+    --white-color: #FFFFFF;
+    --background-color: #FAFAFA;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+button {
+    border-radius: 12px;
+}
+
+[mb-100] {
+    margin-bottom: 120px;
+}
+
+[px-60] {
+    padding: 0px 60px;
+}
+
+[ps-60] {
+    padding-left: 60px;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.black-color {
+    color: var(--black-color);
+}
+
+.gray-color {
+    color: var(--gray-color);
+}
+
+.container-fluid {
+    --bs-gutter-x: 0;
+}
+
+.border-radius-24 {
+    border-radius: 24px;
+}
+
+.border-radius-12 {
+    border-radius: 12px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+
+/*------------------------ 
+ Navbar
+------------------------*/
+
+.navbar {
+    padding: 15px 0;
+    transition: all 0.5s ease;
+    margin-bottom: 60px;
+}
+
+.navbar>.container {
+    padding: 0 15px;
+}
+
+.navbar .nav-item {
+    margin-right: 30px;
+}
+
+.navbar .nav-item .nav-link {
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 36px;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover::before {
+    transform: scale(0.8);
+}
+
+.navbar a.btn.btn-primary {
+    padding: 0.7rem 1.5rem;
+}
+
+.dropdown-menu {
+    border-radius: 12px;
+}
+
+.dropdown-item {
+    padding: 0.7rem 1.3rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+    color: var(--primary-color);
+    text-decoration: none;
+    background: rgba(90, 79, 207, 0.1) !important;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+}
+
+.dropdown-item:hover svg path {
+    fill: var(--primary-color);
+    transition: all 0.5s ease;
+}
+
+
+/* --------------------------------------------------
+ Custom Scrollbar
+  ----------------------------------------------------*/
+
+
+/* width */
+
+ ::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(207, 206, 206);
+}
+
+
+/*------------------------ 
+ Button
+------------------------*/
+
+.btn.btn-primary {
+    background: rgba(90, 79, 207, 0.1) !important;
+    color: var(--primary-color);
+    padding: 16px 28px !important;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn.btn-primary {
+    box-shadow: none !important;
+}
+
+.btn.btn-primary:hover {
+    background: var(--primary-color) !important;
+    color: var(--white-color);
+    transition: all 0.8s ease;
+}
+
+.btn.btn-secondary {
+    background: var(--secondary-color) !important;
+    color: var(--black-color);
+    padding: 16px 28px !important;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn.btn-secondary {
+    box-shadow: none !important;
+}
+
+.btn.btn-secondary i {
+    font-size: 14px;
+}
+
+.btn.btn-secondary:hover {
+    box-shadow: 4px 4px 20px rgba(253, 200, 134, 0.99) !important;
+    transition: all 0.8s ease;
+}
+
+.btn.btn-gray {
+    background: #F2F2F2 !important;
+    color: var(--black-color);
+    padding: 16px 28px !important;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn.btn-gray {
+    box-shadow: none !important;
+}
+
+.btn.btn-gray i {
+    font-size: 14px;
+}
+
+.btn.btn-gray:hover {
+    box-shadow: 4px 4px 20px rgba(207, 207, 207, 0.205) !important;
+    transition: all 0.8s ease;
+}
+
+
+/*------------------------ 
+ Form Control
+------------------------*/
+
+.has-search .form-control {
+    border-radius: 12px;
+    padding: 16px 28px;
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border: none;
+}
+
+.has-search .form-control:focus {
+    box-shadow: var(--primary-color) !important;
+}
+
+.has-search .form-control {
+    padding-left: 2.7rem;
+}
+
+.has-search input::placeholder {
+    font-size: 15px;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    line-height: 3.275rem;
+    text-align: center;
+    pointer-events: none;
+    padding-left: 1rem;
+}
+
+
+/*------------------------ 
+ Slider CSS
+------------------------*/
+
+.owl-carousel .image-resto {
+    border-radius: 24px;
+    object-fit: cover;
+    width: 100%;
+    height: 564px;
+}
+
+.owl-stage {
+    padding-left: 0px !important;
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+}
+
+
+/*------------------------ 
+Hero Css
+------------------------*/
+
+.hero .content-hero {
+    margin-left: 12px;
+    padding: 24px 140px 24px 24px;
+    border-radius: 24px;
+    top: 25%;
+}
+
+.hero .content-hero img {
+    width: 20px;
+}
+
+.btn-box img {
+    width: 6px !important;
+}
+
+.hero .image-hero {
+    padding-left: 100px;
+}
+
+.rating-number {
+    color: #FFB800;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.rating-people {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-color);
+}
+
+.content-hero .title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--black-color);
+}
+
+.content-hero .cost {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--gray-color);
+}
+
+img .location {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-color);
+}
+
+.content-hero .info {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-color);
+}
+
+.checked {
+    color: #FFB800;
+}
+
+.card {
+    border-radius: 24px;
+}
+
+
+/*------------------------ 
+Benefit Section
+------------------------*/
+
+.benefit .card-footer {
+    border-top: none;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-size: 16px;
+    padding: 24px;
+    font-weight: 600;
+    border-radius: 12px 12px 24px 24px !important;
+}
+
+.benefit .card:hover .card-footer {
+    border-top: none;
+    background-color: var(--secondary-color);
+    color: var(--black-color);
+    transition: all 0.5s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.benefit .card:hover .image-card img {
+    width: 80px;
+}
+
+.benefit .card:hover .image-card img {
+    transform: rotate(360deg);
+    transition: transform 1s ease;
+}
+
+.benefit .card-footer i {
+    font-size: 12px;
+}
+
+.benefit .card-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.benefit .card-text {
+    font-size: 16px;
+}
+
+
+/*------------------------ 
+Chefs Section
+------------------------*/
+
+.chef-header .title-section {
+    font-size: 32px;
+}
+
+.item-chef {
+    padding: 24px;
+}
+
+.profile-detail {
+    display: none;
+}
+
+.item-chef:hover {
+    background-color: var(--white-color);
+    border-radius: 24px;
+    transition: all 0.2s ease;
+}
+
+.item-chef:hover a {
+    color: var(--secondary-color);
+}
+
+.item-chef:hover .profile-detail {
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.content-position span {
+    font-size: 16px;
+}
+
+.content-position h5 {
+    font-size: 18px;
+}
+
+.content-position a i {
+    font-size: 10px;
+}
+
+.content-position:hover a {
+    color: var(--secondary-color);
+}
+
+.chef-exp {
+    border-radius: 24px;
+    top: 40px;
+    right: 40px;
+    box-shadow: 8px 8px 25px rgba(102, 102, 102, 0.04);
+    border-radius: 24px;
+}
+
+.chef-position {
+    border-radius: 24px;
+    left: 0;
+    right: 55%;
+    bottom: 40px;
+    padding: 24px;
+    box-shadow: -8px 8px 25px rgba(102, 102, 102, 0.04)
+}
+
+.chef-content .category {
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.chef-content .name {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.chef-exp {
+    padding: 1.5rem 2rem;
+}
+
+
+/*------------------------ 
+Popular Section
+------------------------*/
+
+.content-image {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.content-image .rating-number {
+    font-size: 16px;
+}
+
+.content-image .rating-people {
+    font-size: 16px;
+}
+
+.content-image .title {
+    font-size: 16px;
+}
+
+.content-image .cost {
+    font-size: 16px;
+}
+
+.card-arrow {
+    padding: 9px 14px;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    color: var(--black-color);
+}
+
+.card-arrow:hover {
+    color: var(--black-color);
+    box-shadow: 4px 4px 20px rgba(253, 200, 134, 0.99) !important;
+    transition: all 0.8s ease;
+}
+
+.title-section {
+    font-size: 28px;
+}
+
+.label-section {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.description-section {
+    font-size: 16px;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 24px;
+    flex: 2.5;
+    position: relative;
+    transition: flex 0.5s ease-in;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.panel .content-image {
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active .content-image {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.4s;
+}
