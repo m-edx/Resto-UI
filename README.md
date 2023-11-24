@@ -1,7 +1,7 @@
 # Resto Template
 
 # Demo
-- [Click Me](https://masedd.github.io/Siandes-App-UI/auth/login.html)
+- [Click Me](https://masedd.github.io/Resto-UI)
 
 # Features
 - Bootstrap 5
