@@ -1,7 +1,7 @@
 # Resto Template
 
 # Demo
-- [Click Me](https://m-edx.github.io/Resto-UI)
+- [Click Me](https://masedx.github.io/Resto-UI)
 
 # Features
 - Bootstrap 5
